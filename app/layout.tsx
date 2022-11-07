@@ -1,4 +1,7 @@
+import { Inter } from "@next/font/google";
 import "../styles/globals.css";
+
+const inter = Inter();
 
 export default function RootLayout({
   children,
@@ -6,18 +9,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html className={inter.className}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
-          rel="stylesheet"
-        />
+        <title>DevMentor</title>
       </head>
       <body>{children}</body>
     </html>
